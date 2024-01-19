@@ -16,7 +16,7 @@ Similarly, VARCHAR(50) should be able to accomodate most car model names and the
 
 ### Year
 
-SMALLINT is sufficient for the year of manufacture. The field can be NULL in case the year is unknown, but in the vast majority of cases it should be specified.
+YEAR is most appropriate for the year of manufacture. The field can be NULL at first.
 
 ### Color
 
@@ -28,7 +28,7 @@ E.g., sedan, SUV, coupe. VARCHAR(30) is sufficient for most car body type descri
 
 ### Mileage
 
-Generally cars last about 200,000 to 300,000 miles with proper maintenance, so INT is necessary to represent mileage. The field can be NULL in case the engine has been replaced and the total mileage is unknown.
+Generally cars last about 200,000 to 300,000 miles with proper maintenance, so FLOAT(8,2) is sufficient to represent mileage. The field can be NULL in case the engine has been replaced and the total mileage is unknown.
 
 ### Engine Type
 
@@ -36,7 +36,7 @@ E.g., V6, electric, hybrid. VARCHAR(50) is sufficient for most engine types. The
 
 ### Transmission
 
-E.g., manual, automatic. VARCHAR(50) is used to account for, for example, Continuously Variable Transmission. The field should always be NOT NULL.
+E.g., manual, automatic. VARCHAR(50) is used to account for, for example, Continuously Variable Transmission. The field can be NULL at first and added later.
 
 ### VIN
 
@@ -48,7 +48,7 @@ License plate numbers vary by country but generally do not exceed 10-12 characte
 
 ### Number of Previous Owners
 
-TINYINT is more than enough to represent this. Can be NULL in case this information is unknown, defaults to 0.
+TINYINT is more than enough to represent this. Can be NULL in case this information is unknown, defaults to 1.
 
 ### Accident History
 
